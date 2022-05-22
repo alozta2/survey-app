@@ -1,0 +1,791 @@
+{
+	"info": {
+		"_postman_id": "",
+		"name": "survey-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": ""
+	},
+	"item": [
+		{
+			"name": "survey-app",
+			"item": [
+				{
+					"name": "question-service",
+					"item": [
+						{
+							"name": "get-question",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4060/question/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4060",
+									"path": [
+										"question",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get-question",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:4060/question/3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "4060",
+											"path": [
+												"question",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 May 2022 19:16:59 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 3,\n    \"value\": \"What is character count in ASCII table?\",\n    \"answers\": []\n}"
+								}
+							]
+						},
+						{
+							"name": "get-question-answer-distribution-map",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4060/question/distribution-map",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4060",
+									"path": [
+										"question",
+										"distribution-map"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get-question-answer-distribution-map",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:4060/question/distribution-map",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "4060",
+											"path": [
+												"question",
+												"distribution-map"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 May 2022 20:00:43 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"What is the population of the world?\": {\n        \"42\": 1,\n        \"5,000,000,000\": 1,\n        \"7,868,872,451\": 1\n    },\n    \"What is character count in ASCII table?\": {\n        \"2\": 1,\n        \"128\": 1,\n        \"256\": 1\n    },\n    \"What is the color known as #FFFFFF in hex color palette?\": {\n        \"White\": 2,\n        \"Black\": 1,\n        \"Orange\": 1\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "get-question-with-all-answers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4060/question/1/with-answers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4060",
+									"path": [
+										"question",
+										"1",
+										"with-answers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get-question-with-all-answers",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:4060/question/1/with-answers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "4060",
+											"path": [
+												"question",
+												"1",
+												"with-answers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 May 2022 19:16:25 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"value\": \"What is the population of the world?\",\n    \"answers\": [\n        {\n            \"id\": 1,\n            \"value\": \"7,868,872,451\"\n        },\n        {\n            \"id\": 2,\n            \"value\": \"5,000,000,000\"\n        },\n        {\n            \"id\": 3,\n            \"value\": \"42\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "get-all-questions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4060/question/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4060",
+									"path": [
+										"question",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get-all-questions",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:4060/question/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "4060",
+											"path": [
+												"question",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 May 2022 19:02:47 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"value\": \"What is the population of the world?\",\n        \"answers\": []\n    },\n    {\n        \"id\": 2,\n        \"value\": \"What is the color known as #FFFFFF in hex color palette?\",\n        \"answers\": []\n    },\n    {\n        \"id\": 3,\n        \"value\": \"What is character count in ASCII table?\",\n        \"answers\": []\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "add-new-question",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"value\": \"What is the best game so far in 2022?\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4060/question/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4060",
+									"path": [
+										"question",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "add-new-question",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"value\": \"What is the best game so far in 2022?\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:4060/question/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "4060",
+											"path": [
+												"question",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 May 2022 19:05:31 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 4,\n    \"value\": \"What is the best game so far in 2022?\",\n    \"answers\": []\n}"
+								}
+							]
+						},
+						{
+							"name": "edit-question",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"newValue\": \"What is the best game so far in 2004?\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4060/question/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4060",
+									"path": [
+										"question",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "edit-question",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"newValue\": \"What is the best game so far in 2004?\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:4060/question/4",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "4060",
+											"path": [
+												"question",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 May 2022 19:13:46 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 4,\n    \"value\": \"What is the best game so far in 2004?\",\n    \"answers\": []\n}"
+								}
+							]
+						},
+						{
+							"name": "delete-question",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4060/question/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4060",
+									"path": [
+										"question",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete-question",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:4060/question/4",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "4060",
+											"path": [
+												"question",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 May 2022 19:15:12 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 4,\n    \"value\": \"What is the best game so far in 2004?\",\n    \"answers\": []\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "answer-service",
+					"item": [
+						{
+							"name": "respond-to-question",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"newValue\": \"2048\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4060/answer/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4060",
+									"path": [
+										"answer",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "respond-to-question",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"newValue\": \"2048\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:4060/answer/3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "4060",
+											"path": [
+												"answer",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 May 2022 19:38:44 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 11,\n    \"questionId\": 3,\n    \"value\": \"2048\"\n}"
+								}
+							]
+						},
+						{
+							"name": "delete-answer",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4060/answer/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4060",
+									"path": [
+										"answer",
+										"11"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete-answer",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:4060/answer/11",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "4060",
+											"path": [
+												"answer",
+												"11"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 May 2022 19:40:05 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 11,\n    \"questionId\": 3,\n    \"value\": \"2048\"\n}"
+								}
+							]
+						},
+						{
+							"name": "get-all-answers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4060/answer/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4060",
+									"path": [
+										"answer",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get-all-answers",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:4060/answer/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "4060",
+											"path": [
+												"answer",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 May 2022 19:41:06 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"questionId\": 1,\n        \"value\": \"7,868,872,451\"\n    },\n    {\n        \"id\": 2,\n        \"questionId\": 1,\n        \"value\": \"5,000,000,000\"\n    },\n    {\n        \"id\": 3,\n        \"questionId\": 1,\n        \"value\": \"42\"\n    },\n    {\n        \"id\": 4,\n        \"questionId\": 2,\n        \"value\": \"White\"\n    },\n    {\n        \"id\": 5,\n        \"questionId\": 2,\n        \"value\": \"White\"\n    },\n    {\n        \"id\": 6,\n        \"questionId\": 2,\n        \"value\": \"Orange\"\n    },\n    {\n        \"id\": 7,\n        \"questionId\": 2,\n        \"value\": \"Black\"\n    },\n    {\n        \"id\": 8,\n        \"questionId\": 3,\n        \"value\": \"2\"\n    },\n    {\n        \"id\": 9,\n        \"questionId\": 3,\n        \"value\": \"128\"\n    },\n    {\n        \"id\": 10,\n        \"questionId\": 3,\n        \"value\": \"256\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "get-answer",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4060/answer/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4060",
+									"path": [
+										"answer",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get-answer",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:4060/answer/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "4060",
+											"path": [
+												"answer",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 May 2022 19:42:09 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"questionId\": 1,\n    \"value\": \"7,868,872,451\"\n}"
+								}
+							]
+						},
+						{
+							"name": "get-answer-of-question",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4060/answer/question/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4060",
+									"path": [
+										"answer",
+										"question",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get-answer-of-question",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:4060/answer/question/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "4060",
+											"path": [
+												"answer",
+												"question",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 May 2022 19:43:09 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"questionId\": 1,\n        \"value\": \"7,868,872,451\"\n    },\n    {\n        \"id\": 2,\n        \"questionId\": 1,\n        \"value\": \"5,000,000,000\"\n    },\n    {\n        \"id\": 3,\n        \"questionId\": 1,\n        \"value\": \"42\"\n    }\n]"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

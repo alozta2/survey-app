@@ -1,0 +1,45 @@
+server:
+  port: 4060
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:4061/eureka/
+
+logging:
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+              
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: answer-service
+        uri: lb://answer-service
+        predicates:
+        - Path=/answer/**
+        filters:
+        - RewritePath=/answer/(?<path>.*), /$\{path}
+      - id: question-service
+        uri: lb://question-service
+        predicates:
+        - Path=/question/**
+        filters:
+        - RewritePath=/question/(?<path>.*), /$\{path}
+      - id: openapi
+        uri: http://localhost:${server.port}
+        predicates:
+        - Path=/v3/api-docs/**
+        filters:
+        - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
+
+springdoc:
+  swagger-ui:
+    urls:
+      - name: answer
+        url: /v3/api-docs/answer
+      - name: question
+        url: /v3/api-docs/question
